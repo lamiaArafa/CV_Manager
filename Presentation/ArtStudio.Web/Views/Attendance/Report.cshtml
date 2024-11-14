@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Attendance Report";
+    var today = DateTime.Now.Date.ToString("yyyy-MM-dd");
+}
+
+<div class="panel">
+    <div class="Panel-body">
+        @await Html.PartialAsync("_ReportFiltersPartial")
+        <br />
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-xs-12">
+                <table id="tblReportData" class="table table-bordered" style="width:100%">
+                    <thead>
+                        <tr style="background-color: #0a2640; color:white">
+                            <th>Client Name</th>
+                            <th>Course Name</th>
+                            <th>Sessions Count</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script src="~/js/reports/AttendanceReport.js" asp-append-version="true"></script>
+    <script src="~/js/_reportfilterspartialjs.js"></script>
+}
+

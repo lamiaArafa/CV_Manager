@@ -1,0 +1,113 @@
+﻿@{
+    ViewData["Title"] = "Clients";
+}
+
+<div class="panel">
+    <div class="Panel-body">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-xs-12">
+                <label class="fw-bold fs-1 mt-5 mb-4">Client Name<strong style="color:red">  *</strong></label>
+                <input id="clientName" class="form-control" type="text">
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-xs-12">
+                <label class="fw-bold fs-1 mt-5 mb-4">Country<strong style="color:red">  *</strong></label>
+                <select id="countryId" class="form-select">
+                </select>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-xs-12">
+                <label class="fw-bold fs-1 mt-5 mb-4">Phone Number<strong style="color:red">  *</strong></label>
+                <input id="phoneNum" class="form-control" type="text">
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-xs-12">
+                <label class="fw-bold fs-1 mt-5 mb-4">E-Mail</label>
+                <input id="mail" class="form-control" type="email">
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-3 col-xs-12">
+                <label class="fw-bold fs-1 mt-5 mb-4">Age Group<strong style="color:red">  *</strong></label>
+                <select id="ageGroupId" class="form-select" style="padding:10px;">
+                </select>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-xs-12">
+                <label class="fw-bold fs-1 mt-5 mb-4">Debt</label>
+                <input id="debt" disabled class="form-control" type="number" style="padding:10px;" value="0">
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-xs-12">
+                <label class="fw-bold fs-1 mt-5 mb-4">Is Active</label>
+                <div class="form-check form-switch">
+                    <label class="form-check-label" for="isActive" style="padding:5px">
+                        <input class="form-check-input" checked style="width:70px;  padding:15px" type="checkbox" id="isActive">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="ShowData">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">@ViewData["Title"]</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <table id="tblShowData" class="table table-bordered" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Client name</th>
+                            <th>Phone number</th>
+                            <th>Email</th>
+                            <th>Debt</th>
+                            <th style="width:50px;">Edit</th>
+                        </tr>
+                    </thead>
+                </table>
+
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" id="btnCloseModalShowData" class="btn btn-success text-dark fs-1" data-bs-dismiss="modal" style="padding:3px;width:auto">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script src="~/js/scripts/clientjs.js" asp-append-version="true"></script>
+}
+@*
+<style>
+
+    .container > span > span > span:first-child {
+        border-bottom-right-radius: 0px !important;
+        border-top-right-radius: 0px !important;
+    }
+</style>
+
+<div class="col-lg-3 col-md-3 col-xs-12">
+    <div class="row">
+        <label class="fw-bold fs-1 mt-5 mb-4">Phone Number</label>
+
+        <div class="col-lg-6 col-md-6 col-xs-12 container" style="padding:0px;">
+            <select id="countryId" class="form-select">
+            </select>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-xs-12" style="padding:0px">
+            <input id="phoneNum" class="form-control" type="text" style="border-radius:0px 30px 30px 0px">
+        </div>
+    </div>
+</div> *@

@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Lookups";
+}
+
+<div class="panel">
+    <div class="Panel-body">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-xs-12">
+                <label class="fw-bold fs-1 mt-5 mb-4">Lookup Type<strong style="color:red">  *</strong></label>
+                <select id="types" class="form-select">
+                </select>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-xs-12">
+                <label class="fw-bold fs-1 mt-5 mb-4">Lookup Name<strong style="color:red">  *</strong></label>
+                <input id="name" class="form-control" type="text">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="ShowData">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">@ViewData["Title"]</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <table id="tblShowData" class="table table-bordered" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Lookup type</th>
+                            <th>Lookup</th>
+                            <th style="width:50px;">Edit</th>
+                        </tr>
+                    </thead>
+                </table>
+
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" id="btnCloseModalShowData" class="btn btn-success text-dark fs-1" data-bs-dismiss="modal" style="padding:3px;width:auto">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script src="~/js/scripts/LookupJS.js" asp-append-version="true"></script>
+}
